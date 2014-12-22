@@ -1,4 +1,4 @@
-<DestinationUser>
+<DestinationUser xmlns="http://jewzaam.org/destination/1">
     <Identifiers>
         <MasterSystem>source</MasterSystem>
         <Identifier system="source" entity-name="User">10</Identifier>
