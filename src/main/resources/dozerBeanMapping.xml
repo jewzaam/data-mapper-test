@@ -7,5 +7,13 @@
             <a>test</a>
             <b>test</b>
         </field>
+        <field>
+            <a>firstName</a>
+            <b>person.firstName</b>
+        </field>
+        <field>
+            <a>lastName</a>
+            <b>person.lastName</b>
+        </field>
     </mapping>
 </mappings>
