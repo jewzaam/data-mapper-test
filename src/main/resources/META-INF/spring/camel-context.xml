@@ -10,6 +10,7 @@
     </dataFormats>
     <route>
       <from uri="file:src/data?fileName=source.xml&amp;noop=true"/>
+      <to ref="src2dest"/>
       <to uri="file:target/messages?fileName=destination.xml"/>
     </route>
   </camelContext>
