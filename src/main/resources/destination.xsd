@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    targetNamespace="http://jewzaam.org/destination/1"
+    xmlns:tns="http://jewzaam.org/destination/1">
+    
+    <xs:complexType name="StatusType">
+        <xs:annotation>
+            <xs:documentation>Relative position or standing ie. active, inactive.  Providing optional date elements for systems that support dating flexibility (for example future end dating).</xs:documentation>
+        </xs:annotation>
+
+        <xs:sequence>
+            <xs:element name="State" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Denotes the state of the status - for example active or inactive.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="StartDate" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Starting date of the status</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="EndDate" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Ending date of the status.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+
+        <xs:attribute name="primary" type="xs:boolean">
+            <xs:annotation>
+                <xs:documentation>Denotes if this status is the primary (current) status of the entity.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="IdentifiersType">
+        <xs:annotation>
+            <xs:documentation>Contains information about what system created an entity, and all systems cross reference information.</xs:documentation>
+        </xs:annotation>
+
+        <xs:sequence>
+            <xs:element minOccurs="0" name="MasterSystem" type="xs:string"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="tns:Identifier"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="Reference" type="tns:ReferenceType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ReferenceType">
+        <xs:annotation>
+            <xs:documentation>Immutable candidate key from non-source systems which may be used for the purpose of cross referencing information about an entity between systems/applications.</xs:documentation>
+        </xs:annotation>
+
+        <xs:complexContent>
+            <xs:extension base="tns:IdentifierType"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="IdentifierType">
+        <xs:annotation>
+            <xs:documentation>Immutable primary key from the source system which may be used for the purpose of cross referencing information about an entity between systems/applications.</xs:documentation>
+        </xs:annotation>
+
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="system" type="xs:string"/>
+                <xs:attribute name="entity-name" type="xs:string"/>
+                <xs:attribute name="entity-type" type="xs:string"/>
+                <xs:attribute name="qualifier" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="PersonType">
+        <xs:complexContent>
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="FirstName" type="xs:string"/>
+                    <xs:element minOccurs="0" name="MiddleName" type="xs:string"/>
+                    <xs:element minOccurs="0" name="LastName" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+    </xs:complexType>
+
+    <xs:complexType name="UserType">
+        <xs:complexContent>
+                <xs:sequence>
+                    <xs:element name="Person" type="tns:PersonType" minOccurs="0"/>
+                    <xs:element name="Identifiers" type="tns:IdentifiersType" minOccurs="0"/>
+                    <xs:element name="Status" type="tns:StatusType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+</xs:schema>
