@@ -1,0 +1,16 @@
+<DestinationUser>
+    <Identifiers>
+        <MasterSystem>source</MasterSystem>
+        <Identifier system="source" entity-name="User">10</Identifier>
+    </Identifiers>
+    <Status primary="true">
+        <State>Active</Active>
+    </Status>
+    <Person>
+        <FirstName>John</FirstName>
+        <LastName>Doe</LastName>
+        <Credientials>
+            <Login>jdoe</Login>
+        </Credientials>
+    </Person>
+</DestinationUser>

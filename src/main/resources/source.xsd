@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-    attributeFormDefault="unqualified"
-    targetNamespace="http://jewzaam.org/source/1"
-    xmlns:tns="http://jewzaam.org/source/1">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified"
+	targetNamespace="http://jewzaam.org/source/1" xmlns:tns="http://jewzaam.org/source/1">
 
-    <xs:complexType name="UserType">
-        <xs:complexContent>
-                <xs:sequence>
-                    <xs:element name="Identifier" type="xs:integer" minOccurs="0"/>
-                    <xs:element name="StatusCode" type="xs:string" minOccurs="0"/>
-                    <xs:element name="FirstName" type="xs:string" minOccurs="0"/>
-                    <xs:element name="LastName" type="xs:string" minOccurs="0"/>
-                    <xs:element name="Login" type="xs:string" minOccurs="1"/>
-                    <xs:element name="Email" type="xs:string" minOccurs="1"/>
-                </xs:sequence>
-            </xs:extension>
-    </xs:complexType>
+	<xs:complexType name="UserType">
+		<xs:sequence>
+			<xs:element name="Identifier" type="xs:integer" minOccurs="0" />
+			<xs:element name="StatusCode" type="xs:string" minOccurs="0" />
+			<xs:element name="FirstName" type="xs:string" minOccurs="0" />
+			<xs:element name="LastName" type="xs:string" minOccurs="0" />
+			<xs:element name="Login" type="xs:string" minOccurs="1" />
+			<xs:element name="Email" type="xs:string" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
 
+	<xs:element name="SourceUser" type="tns:UserType" />
 </xs:schema>

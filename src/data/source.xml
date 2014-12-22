@@ -1,0 +1,8 @@
+<SourceUser>
+    <Identifier>10</Identifier>
+    <StatusCode>A</StatusCode>
+    <FirstName>John</FirstName>
+    <LastName>Doe</LastName>
+    <Login>jdoe</Login>
+    <Email>jdoe@ether.net</Email>
+</SourceUser>
