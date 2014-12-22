@@ -4,24 +4,8 @@
         <class-a>source.UserType</class-a>
         <class-b>destination.UserType</class-b>
         <field>
-            <a>identifier</a>
-            <b>identifier.value</b>
-        </field>
-        <field>
-            <a>firstName</a>
-            <b>person.firstName</b>
-        </field>
-        <field>
-            <a>lastName</a>
-            <b>person.lastName</b>
-        </field>
-        <field>
-            <a>login</a>
-            <b>credientials.login</b>
-        </field>
-        <field>
-            <a>statusCode</a>
-            <b>status.state</b>
+            <a>test</a>
+            <b>test</b>
         </field>
     </mapping>
 </mappings>

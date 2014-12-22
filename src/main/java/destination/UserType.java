@@ -3,9 +3,11 @@ package destination;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -19,9 +21,10 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Identifiers" type="{http://jewzaam.org/destination/1}IdentifiersType" minOccurs="0"/>
- *         &lt;element name="Status" type="{http://jewzaam.org/destination/1}StatusType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="Person" type="{http://jewzaam.org/destination/1}PersonType" minOccurs="0"/>
+ *         &lt;element name="Test" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="Identifiers" type="{}IdentifiersType" minOccurs="0"/>
+ *         &lt;element name="Status" type="{}StatusType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Person" type="{}PersonType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,20 +33,48 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * 
  */
+@XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "UserType", propOrder = {
+    "test",
     "identifiers",
     "status",
     "person"
 })
 public class UserType {
 
+    @XmlElement(name = "Test")
+    protected String test;
     @XmlElement(name = "Identifiers")
     protected IdentifiersType identifiers;
     @XmlElement(name = "Status")
     protected List<StatusType> status;
     @XmlElement(name = "Person")
     protected PersonType person;
+
+    /**
+     * Gets the value of the test property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTest() {
+        return test;
+    }
+
+    /**
+     * Sets the value of the test property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTest(String value) {
+        this.test = value;
+    }
 
     /**
      * Gets the value of the identifiers property.

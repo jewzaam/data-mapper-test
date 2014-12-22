@@ -3,7 +3,7 @@
 
    <!-- Camel route -->
    <camelContext xmlns="http://camel.apache.org/schema/spring">
-    <endpoint id="src2dest" uri="transform:src2dest?sourceModel=source.UserType&amp;targetModel=destination.CredientialsType&amp;marshalId=destination&amp;unmarshalId=source"/>
+    <endpoint id="src2dest" uri="transform:src2dest?sourceModel=source.UserType&amp;targetModel=destination.UserType&amp;marshalId=destination&amp;unmarshalId=source"/>
     <dataFormats>
       <jaxb contextPath="source" id="source"/>
       <jaxb contextPath="destination" id="destination"/>

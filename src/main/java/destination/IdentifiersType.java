@@ -24,8 +24,8 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="MasterSystem" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="Identifier" type="{http://jewzaam.org/destination/1}IdentifierType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="Reference" type="{http://jewzaam.org/destination/1}ReferenceType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Identifier" type="{}IdentifierType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Reference" type="{}ReferenceType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

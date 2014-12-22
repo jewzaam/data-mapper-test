@@ -1,4 +1,5 @@
 <SourceUser>
+    <Test>please work</Test>
     <Identifier>10</Identifier>
     <StatusCode>A</StatusCode>
     <FirstName>John</FirstName>

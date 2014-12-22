@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;complexType name="ReferenceType">
  *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://jewzaam.org/destination/1>IdentifierType">
+ *     &lt;extension base="&lt;>IdentifierType">
  *     &lt;/extension>
  *   &lt;/simpleContent>
  * &lt;/complexType>

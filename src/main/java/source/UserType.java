@@ -2,9 +2,11 @@
 package source;
 
 import java.math.BigInteger;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -18,6 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="Test" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="Identifier" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
  *         &lt;element name="StatusCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="FirstName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -32,8 +35,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * 
  */
+@XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "UserType", propOrder = {
+    "test",
     "identifier",
     "statusCode",
     "firstName",
@@ -43,6 +48,8 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class UserType {
 
+    @XmlElement(name = "Test")
+    protected String test;
     @XmlElement(name = "Identifier")
     protected BigInteger identifier;
     @XmlElement(name = "StatusCode")
@@ -55,6 +62,30 @@ public class UserType {
     protected String login;
     @XmlElement(name = "Email", required = true)
     protected String email;
+
+    /**
+     * Gets the value of the test property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTest() {
+        return test;
+    }
+
+    /**
+     * Sets the value of the test property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTest(String value) {
+        this.test = value;
+    }
 
     /**
      * Gets the value of the identifier property.
