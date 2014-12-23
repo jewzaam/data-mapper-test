@@ -4,8 +4,8 @@
         <class-a>source.SourceUser</class-a>
         <class-b>destination.DestinationUser</class-b>
         <field>
-            <a>test</a>
-            <b>test</b>
+            <a>statusCode</a>
+            <b>status[0].state</b>
         </field>
     </mapping>
 </mappings>
