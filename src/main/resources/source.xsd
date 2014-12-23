@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    elementFormDefault="qualified" attributeFormDefault="unqualified">
+	elementFormDefault="qualified" attributeFormDefault="unqualified"
+	targetNamespace="http://jewzaam.org/source/1" xmlns:tns="http://jewzaam.org/source/1">
 
 	<xs:complexType name="UserType">
 		<xs:sequence>
@@ -14,5 +15,5 @@
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:element name="SourceUser" type="UserType" />
+	<xs:element name="SourceUser" type="tns:UserType" />
 </xs:schema>

@@ -1,4 +1,4 @@
-<SourceUser>
+<SourceUser xmlns="http://jewzaam.org/source/1">
     <Test>please work</Test>
     <Identifier>10</Identifier>
     <StatusCode>A</StatusCode>
