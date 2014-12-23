@@ -7,13 +7,12 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlRootElement;
 
 
 /**
  * Contains information about what system created an
- * 				entity, and all systems cross reference information.
- * 			
+ *                 entity, and all systems cross reference information.
+ *             
  * 
  * <p>Java class for IdentifiersType complex type.
  * 
@@ -25,8 +24,8 @@ import javax.xml.bind.annotation.XmlRootElement;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="MasterSystem" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="Identifier" type="{}IdentifierType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="Reference" type="{}ReferenceType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Identifier" type="{http://jewzaam.org/destination/1}IdentifierType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Reference" type="{http://jewzaam.org/destination/1}ReferenceType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,7 +34,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  * 
  * 
  */
-@XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "IdentifiersType", propOrder = {
     "masterSystem",

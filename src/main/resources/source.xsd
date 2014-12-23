@@ -5,7 +5,7 @@
 
 	<xs:complexType name="UserType">
 		<xs:sequence>
-            <xs:element name="Test" type="xs:string" minOccurs="0"/>
+			<xs:element name="Test" type="xs:string" minOccurs="0" />
 			<xs:element name="Identifier" type="xs:integer" minOccurs="0" />
 			<xs:element name="StatusCode" type="xs:string" minOccurs="0" />
 			<xs:element name="FirstName" type="xs:string" minOccurs="0" />
@@ -15,5 +15,12 @@
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:element name="SourceUser" type="tns:UserType" />
+	<xs:element name="SourceUser">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="tns:UserType" />
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
 </xs:schema>

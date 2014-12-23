@@ -12,8 +12,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 /**
  * Relative position or standing ie. active, inactive.
- * 				Providing optional date elements for systems that support dating
- * 				flexibility (for example future end dating).
+ *                 Providing optional date elements for systems that support dating
+ *                 flexibility (for example future end dating).
  * 
  * <p>Java class for StatusType complex type.
  * 

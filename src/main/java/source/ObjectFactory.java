@@ -1,10 +1,7 @@
 
 package source;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
-import javax.xml.namespace.QName;
 
 
 /**
@@ -24,7 +21,6 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _SourceUser_QNAME = new QName("", "SourceUser");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: source
@@ -34,20 +30,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link SourceUser }
+     * 
+     */
+    public SourceUser createSourceUser() {
+        return new SourceUser();
+    }
+
+    /**
      * Create an instance of {@link UserType }
      * 
      */
     public UserType createUserType() {
         return new UserType();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UserType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "", name = "SourceUser")
-    public JAXBElement<UserType> createSourceUser(UserType value) {
-        return new JAXBElement<UserType>(_SourceUser_QNAME, UserType.class, null, value);
     }
 
 }

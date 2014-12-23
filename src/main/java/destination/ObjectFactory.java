@@ -1,10 +1,7 @@
 
 package destination;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
-import javax.xml.namespace.QName;
 
 
 /**
@@ -24,7 +21,6 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _DestinationUser_QNAME = new QName("", "DestinationUser");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: destination
@@ -34,19 +30,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link DestinationUser }
+     * 
+     */
+    public DestinationUser createDestinationUser() {
+        return new DestinationUser();
+    }
+
+    /**
      * Create an instance of {@link UserType }
      * 
      */
     public UserType createUserType() {
         return new UserType();
-    }
-
-    /**
-     * Create an instance of {@link CredientialsType }
-     * 
-     */
-    public CredientialsType createCredientialsType() {
-        return new CredientialsType();
     }
 
     /**
@@ -74,6 +70,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link CredientialsType }
+     * 
+     */
+    public CredientialsType createCredientialsType() {
+        return new CredientialsType();
+    }
+
+    /**
      * Create an instance of {@link IdentifierType }
      * 
      */
@@ -87,15 +91,6 @@ public class ObjectFactory {
      */
     public ReferenceType createReferenceType() {
         return new ReferenceType();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UserType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "", name = "DestinationUser")
-    public JAXBElement<UserType> createDestinationUser(UserType value) {
-        return new JAXBElement<UserType>(_DestinationUser_QNAME, UserType.class, null, value);
     }
 
 }

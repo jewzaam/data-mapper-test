@@ -111,5 +111,11 @@
     </xs:complexType>
 
 
-    <xs:element name="DestinationUser" type="tns:UserType" />
+	<xs:element name="DestinationUser">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="tns:UserType" />
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
 </xs:schema>

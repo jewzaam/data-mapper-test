@@ -11,8 +11,8 @@ import javax.xml.bind.annotation.XmlValue;
 
 /**
  * Immutable primary key from the source system which
- * 				may be used for the purpose of cross referencing information about
- * 				an entity between systems/applications.
+ *                 may be used for the purpose of cross referencing information about
+ *                 an entity between systems/applications.
  * 
  * <p>Java class for IdentifierType complex type.
  * 
